@@ -1,13 +1,35 @@
 Inicio
-Ingresar nombreAlumno, materia, nota1, nota2 , nota3
+	Ingresar nombreAlumno, materia
 
-Si (0<nota1<= 10) y (0<nota2<=10) y (0<nota3<= 10) entonces
-	prom=(nota1 + nota2 + nota3)/3
+	Ingresar nota1
+		Mientras (nota1<0 && nota1>10)  entonces
+			Escribir("La nota debe estar en el rango de 0 a 10. Inténtelo de nuevo.")
+		        Escribir("Ingrese la primera nota: ")
+		        Ingresar nota1
+		Fin mientras
+
+	Ingresar nota2
+		Mientras (nota2<0 && nota2>10)  entonces
+				Escribir("La nota debe estar en el rango de 0 a 10. Inténtelo de nuevo.")
+			        Escribir("Ingrese la segunda nota: ")
+			        Ingresar nota2
+		Fin mientras
+
+	Ingresar nota3
+		Mientras (nota3<0 && nota3>10)  entonces
+				Escribir("La nota debe estar en el rango de 0 a 10. Inténtelo de nuevo.")
+			        Escribir("Ingrese la tercera nota: ")
+			        Ingresar nota3
+		Fin mientras
+	
+	
+	
+	Hacer Prom=(nota1 + nota2 + nota3)/3
 		si (prom >= 7) entonces
 			imprimir:  ¡felicidades! Has aprobado con un promedio de [prom]
 		else
 			imprimir: [nombreAlumno] gracias por tu esfuerzo. Nos vemos pronto en clase. El promedio obtenido es [prom].
-else 
-	regrese al paso 2
+
+
 
 Fin
